@@ -10,6 +10,7 @@ const links = [
   { name: "button", href: "button" },
   { name: "alert dialog", href: "alert-dialog" },
   { name: "badge", href: "badge" },
+  { name: "calendar", href: "calendar" },
   { name: "avatar", href: "avatar" },
 ].sort((a, b) => a.name.localeCompare(b.name));
 
