@@ -17,7 +17,13 @@ export default function Page() {
 
   const [dialogOpen, setDialogOpen] = useState(false);
   return (
-    <AlertDialog open={dialogOpen} onOpenChange={value => console.log({open})}>
+    <div className=" grid grid-cols-2 gap-4">
+
+ 
+    <AlertDialog 
+    // open={dialogOpen} onOpenChange={value => console.log({open})}
+    open={dialogOpen} onOpenChange={setDialogOpen}
+    >
 
     <AlertDialogTrigger asChild>
       <Button variant="outline">Show Dialog</Button>
@@ -39,5 +45,7 @@ export default function Page() {
 
     </AlertDialogContent>
   </AlertDialog>
+  <Button onClick={()=>setDialogOpen(true)}>Open Dialog</Button>
+  </div>
   );
 }
