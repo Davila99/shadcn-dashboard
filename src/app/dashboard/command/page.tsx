@@ -39,35 +39,35 @@ export default function Page() {
     <div>
       <CommandDialog open={open} onOpenChange={(value) => setOpen(value)}>
         <CommandInput placeholder="Type a command or search..." />
-        <CommandList className="h-[500px]">
+        <CommandList >
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
             <CommandItem onSelect={() => console.log('calendar')}>
               <CalendarIcon className="mr-2 h-4 w-4" />
               <span>Calendar</span>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => console.log('Search')}>
               <FaceIcon className="mr-2 h-4 w-4" />
               <span>Search Emoji</span>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => console.log('Launch')}>
               <RocketIcon className="mr-2 h-4 w-4" />
               <span>Launch</span>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Settings">
-            <CommandItem>
+          <CommandItem onSelect={() => console.log('Profile')}>
               <PersonIcon className="mr-2 h-4 w-4" />
               <span>Profile</span>
               <CommandShortcut>⌘P</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => console.log('Mail')}>
               <EnvelopeClosedIcon className="mr-2 h-4 w-4" />
               <span>Mail</span>
               <CommandShortcut>⌘B</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => console.log('Settings')}>
               <GearIcon className="mr-2 h-4 w-4" />
               <span>Settings</span>
               <CommandShortcut>⌘S</CommandShortcut>
